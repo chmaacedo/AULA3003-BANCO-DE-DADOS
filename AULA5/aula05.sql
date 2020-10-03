@@ -1,4 +1,7 @@
 
---Exibe todos os bancos de dados criados
+-- Exibe todos os bancos de dados criados
 \l
+
+-- Criar banco de dados novo
+CREATE DATABASE aula06ni;
 
