@@ -12,9 +12,11 @@ CREATE DATABASE aula06ni;
 */
 
 -- Criar tabela no banco de dados
-
 CREATE TABLE curso(
     id int,
     nome varchar(50)
 );
 
+/* Exibe descrição da tabela e as colunas
+\d curso;
+*/
