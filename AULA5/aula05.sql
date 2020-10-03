@@ -20,3 +20,8 @@ CREATE TABLE curso(
 /* Exibe descrição da tabela e as colunas
 \d curso;
 */
+
+-- Inserir dados em uma tabela
+INSERT INTO curso VALUES (
+    100, 'Sistemas de informação'
+);
