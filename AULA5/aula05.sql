@@ -27,18 +27,29 @@ CREATE TABLE curso(
 
 -- Inserir dados em uma tabela
 INSERT INTO curso VALUES ( 100, 'Sistemas de informação' );
-INSERT INTO curso VALUES ( 200, 'Análise de sistemas' );
-INSERT INTO curso VALUES ( 300, 'Administração' );
-INSERT INTO curso VALUES ( 400, 'Direito' );
-INSERT INTO curso VALUES ( 500, 'Engenharia de software' );
+INSERT INTO curso VALUES ( 101, 'Análise de sistemas' );
+INSERT INTO curso VALUES ( 102, 'Administração' );
+INSERT INTO curso VALUES ( 103, 'Direito' );
+INSERT INTO curso VALUES ( 104, 'Engenharia de software' );
 
 
 --DDL
 --Consultar dados em uma tabela
 SELECT * FROM curso;
+SELECT id,nome FROM curso;
+
 
 -- Atualiza todos os dados da tabela
 UPDATE curso SET id = 100, nome = 'Medicina';
 
+
+--Atualizando dados selecionados
+UPDATE curso SET nome = 'Redes de computadores' WHERE id = 102;
+
+
 -- Deleta todos os dados da tabela curso
 DELETE FROM curso;
+
+--Deletando dados selecionados
+DELETE FROM curso WHERE id = 103;
+
