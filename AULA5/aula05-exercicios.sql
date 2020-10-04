@@ -47,5 +47,6 @@ CREATE TABLE bens(
     id INT PRIMARY KEY,
     nome VARCHAR(40) NOT NULL,
     tipo VARCHAR(6) CHECK(tipo = 'movel' OR tipo = 'imovel') NOT NULL,
-    valor INT
+    valor NUMERIC(9,2) CHECK(valor > 0 AND valor <= 1000000) NOT NULL /* CRIANDO COM NUMERIC COM NO MAXIMO 11 DIGITOS
+9 VALORES E 2 DECIMAIS */
 );
