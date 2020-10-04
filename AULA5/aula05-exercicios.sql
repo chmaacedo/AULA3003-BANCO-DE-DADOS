@@ -13,8 +13,10 @@ ja um bem, obrigatoriamente dese ser de um, e somente um proprietario.
 3-Insira 5 registros diferentes em cada uma das tabelas.
 */
 
+
 -- CRIAÇÃO DO BANCO DE DADOS
 CREATE DATABASE exercicios_aula05;
+
 
 /* CRIAÇÃO DA TABELA proprietario/ PRIMARY KEY = CHAVE PRIMARIA, NOT NULL = CAMPO OBRIGATÓRIO
 UNIQUE = VALORES UNICOS, RESTRIÇÃO = CONSTRAINT, CHECK ACEITA APENAS AS VARIAVEL DESCRITA*/
@@ -26,13 +28,16 @@ CREATE TABLE proprietario(
     sexo CHAR(1) CHECK (sexo = 'M' OR sexo = 'F') NOT NULL
 );
 
+
 /* EXIBE DESCRIÇÃO DAS TABELAS
 \d visitante;
 */
 
+
 /* EXIBE TABELAS DO BANCO DE DADOS CONECTADO
 \dt
 */
+
 
 -- INSERINDO DADOS NA TABELA PROPRIETARIO
 INSERT INTO proprietario VALUES(100,'Pedro','pedro@gmail.com','Rua ABC', 'M');
@@ -52,3 +57,14 @@ CREATE TABLE bens(
     id_prop INT NOT NULL,
     FOREIGN KEY (id_prop) REFERENCES proprietario(id) --CRIANDO REFERENCIA COM OUTRA TABELA
 );
+
+
+INSERT INTO bens VALUES (201, 'Avião', 'movel', 132501, 100);
+INSERT INTO bens VALUES (203, 'Avião', 'movel', 250000, 103);
+INSERT INTO bens VALUES (204, 'Avião', 'movel', 154300, 102);
+INSERT INTO bens VALUES (202, 'Avião', 'movel', 132501, 101);
+INSERT INTO bens VALUES (205, 'Avião', 'movel', 100000, 104);
+
+
+--DELETANDO DADOS DE UMA TABELA
+DELETE FROM proprietario where id = 102;
