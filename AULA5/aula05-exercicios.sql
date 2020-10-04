@@ -16,7 +16,7 @@ ja um bem, obrigatoriamente dese ser de um, e somente um proprietario.
 -- CRIAÇÃO DO BANCO DE DADOS
 CREATE DATABASE exercicios_aula05;
 
-/* CRIAÇÃO DA TABELA VISITANTE/ PRIMARY KEY = CHAVE PRIMARIA, NOT NULL = CAMPO OBRIGATÓRIO
+/* CRIAÇÃO DA TABELA proprietario/ PRIMARY KEY = CHAVE PRIMARIA, NOT NULL = CAMPO OBRIGATÓRIO
 UNIQUE = VALORES UNICOS, RESTRIÇÃO = CONSTRAINT, CHECK ACEITA APENAS AS VARIAVEL DESCRITA*/
 CREATE TABLE proprietario(
     id INT PRIMARY KEY,
@@ -30,6 +30,10 @@ CREATE TABLE proprietario(
 \d visitante;
 */
 
+/* EXIBE TABELAS DO BANCO DE DADOS CONECTADO
+\dt
+*/
+
 -- INSERINDO DADOS NA TABELA PROPRIETARIO
 INSERT INTO proprietario VALUES(100,'Pedro','pedro@gmail.com','Rua ABC', 'M');
 INSERT INTO proprietario VALUES(101,'Yuri','yuri@gmail.com','Rua DEF', 'M');
@@ -38,23 +42,10 @@ INSERT INTO proprietario VALUES(103,'Rayane','rayane@gmail.com','Rua SAC', 'F');
 INSERT INTO proprietario VALUES(104,'Sarah','sarah@gmail.com','Rua CQT', 'F');
 
 
-CREATE TABLE cliente(
-    id INT PRIMARY KEY,
-    nome VARCHAR(50),
-    email VARCHAR(30),
-    sexo VARCHAR(15),
-    endereco VARCHAR(40)
-);
-
-
+-- CRIANDO TABELA BENS
 CREATE TABLE bens(
-    id_cliente INT,
-    nome VARCHAR(50),
-    tipo VARCHAR(10),
+    id INT PRIMARY KEY,
+    nome VARCHAR(40) NOT NULL,
+    tipo VARCHAR(6) CHECK(tipo = 'movel' OR tipo = 'imovel') NOT NULL,
     valor INT
 );
-
-
-
-
-INSERT INTO cliente VALUES('Sara','sara@email.com','Feminino','Rua ACD','Carro');
