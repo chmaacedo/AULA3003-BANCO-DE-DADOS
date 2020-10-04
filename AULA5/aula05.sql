@@ -22,6 +22,12 @@ CREATE TABLE curso(
 */
 
 -- Inserir dados em uma tabela
-INSERT INTO curso VALUES (
-    100, 'Sistemas de informação'
-);
+INSERT INTO curso VALUES ( 100, 'Sistemas de informação' );
+INSERT INTO curso VALUES ( 200, 'Análise de sistemas' );
+INSERT INTO curso VALUES ( 300, 'Administração' );
+INSERT INTO curso VALUES ( 400, 'Direito' );
+INSERT INTO curso VALUES ( 500, 'Engenharia de software' );
+
+--DDL
+--Consultar dados em uma tabela
+SELECT * FROM curso;
